@@ -67,7 +67,7 @@ they're listed below as bullets.
 this one is my favorite.
 neverupgrade prevents pkg from regenerating your config.
 pkg currently doesn't keep values after regenerating, so you will use this quite a bit.
-we expect to implement retained values in v4, for now you'll need to deal with it.
+we expect to implement retained values in **v4**, for now you'll need to deal with it.
 
 - repo
 a string that defines your github repository.
