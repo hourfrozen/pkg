@@ -1,6 +1,6 @@
 local src = {}
 src.safe = 1 -- we recommend not touching this
-local helper = require(script.Parent.Modules.helper)
+local helper = require(script.Parent.Parent.Parent.helper)
 
 function src.init()
 	-- this code runs first. edit this as you please.

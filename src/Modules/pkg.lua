@@ -23,6 +23,7 @@ function pkg.init()
 		confr:Destroy()
 		createconf()
 	end
+	local confr = game.ReplicatedFirst:FindFirstChild("pkgconf")
 	confr:WaitForChild("v")
 	print("version id present in confr")
 
@@ -38,7 +39,6 @@ function pkg.init()
 		warn("There is nothing to do!")
 	end
 
-	local confr = game.ReplicatedFirst:FindFirstChild("pkgconf")
 	return confr
 end
 
