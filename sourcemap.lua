@@ -42,6 +42,12 @@ function src.init()
 	textbox.AnchorPoint = Vector2.new(0.5, 0.5)
 end
 
+-- support legacy pkg, soon useless.
+-- TODO: REMOVE AFTER PKG GAME IS MODERNIZED
+local root = workspace:WaitForChild("pkg")
+local res = root:WaitForChild("res")
+local modules = root:WaitForChild("Modules")
+
 src.mapped = {
 	{
 		path = "src/Core/INTERNAL.lua",
