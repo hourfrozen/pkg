@@ -1,5 +1,15 @@
 # pkg from hourfrozen & triodev
 
+## notes
+this repository is for development
+if you're looking to get pkg you need to find it on the creator store. LINK GOES HERE LMAO
+if you intend on creating a PR or fork of pkg to customize it or add new features, you're in the right place.
+if you want to learn how to use pkg, you are also in the right place. focus on this readme and where it leads you.
+if you do not understand the following or cannot grasp github, don't use pkg.
+thank you for reading, however if you didn't read this and came back to complain, i'm not responsible for whatever you did.
+MIGRATION FROM ROBLOX TEAM CREATE TO PKG MUST BE DONE MANUALLY UNTIL I CAN MAKE A TOOL TO DO SO!
+
+
 ## maintainers
 - hourfrozen
 - halexusga
