@@ -1,5 +1,5 @@
 local src = {}
-
+src.safe = 1 -- we recommend not touching this
 local helper = require(script.Parent.Modules.helper)
 
 function src.init()

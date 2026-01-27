@@ -2,6 +2,7 @@
 -- USE WITH: github.com/hourfrozen/pkg
 
 local src = {}
+src.safe = 0 -- DO NOT TRY REPLICATING THIS WITH YOUR OWN SOURCEMAPS, PLEASE
 
 local root, res, modules
 

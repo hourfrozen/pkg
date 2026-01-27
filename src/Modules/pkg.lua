@@ -47,7 +47,17 @@ end
 function pkg.sync()
 	local confr = game.ReplicatedFirst:FindFirstChild("pkgconf")
 	local sourcemapraw = github.repo_get(confr.user.Value, confr.repo.Value, "sourcemap.luau")
-	local sourcemap = INTERNAL.cleanSourcemap(sourcemapraw)
+	local res1, srcmapdatraw = pcall(function()
+		local it = Instance.new("ModuleScript")
+		it.Parent = script.cache
+		return require(sourcemapraw)
+	end)
+	local sourcemap = ""
+	if res1 and srcmapdatraw.safe == 1 then
+		sourcemap = INTERNAL.cleanSourcemap(sourcemapraw)
+	elseif res1 and srcmapdatraw.safe == 0 then
+		sourcemap = sourcemapraw
+	end
 	local srcinst = Instance.new("ModuleScript")
 	srcinst.Parent = script.cache
 	srcinst.Source = sourcemap
