@@ -9,11 +9,12 @@ pkg.verbose = false
 -- config end
 
 -- Initialize PKG
-function pkg.init()
+function pkg.init() -- removed v config
+	local confl = script.Parent.Parent.res.conf
 	local directory = game.ReplicatedFirst
 	local confr = game.ReplicatedFirst:FindFirstChild("pkgconf")
 	local function createconf()
-		local newconf = script.conf:Clone()
+		local newconf = confl:Clone()
 		newconf.Name = "pkgconf"
 		newconf.Parent = directory
 	end
@@ -24,17 +25,15 @@ function pkg.init()
 		createconf()
 	end
 	local confr = game.ReplicatedFirst:FindFirstChild("pkgconf")
-	confr:WaitForChild("v")
-	print("version id present in confr")
 
-	if confr.v.Value ~= script.conf.v.Value and confr.neverupgrade.Value == false then
+	if confr.Value ~= confl.Value and confr.neverupgrade.Value == false then
 		confr:Destroy()
 		createconf()
-	elseif confr.neverupgrade.Value ~= false then
+	elseif confr.neverupgrade.Value == true then
 		print("Configuration file is set to not upgrade.")
 	end
 
-	if confr.v.Value == script.conf.v.Value then
+	if confr.Value == confl.Value then
 		print("Config is up to date.")
 		warn("There is nothing to do!")
 	end

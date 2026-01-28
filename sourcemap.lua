@@ -20,6 +20,11 @@ function src.init()
 	modules.Parent = root
 	-- breaking my own rules..
 	-- only acceptable instances of instance.new being used in a sourcemap, crucify me if you will idc.
+	local conf = Instance.new("NumberValue", res)
+	local repoconf = Instance.new("StringValue", conf)
+	local USSRconf = Instance.new("StringValue", conf)
+	local neverconf = Instance.new("BoolValue", conf)
+
 	local contained = Instance.new("Frame", res)
 	contained.Name = "contained"
 	local warnbox = Instance.new("TextLabel", contained)
@@ -41,6 +46,15 @@ function src.init()
 	textbox.Size = UDim2.new(0.4, 0, 0.1, 0)
 	textbox.Position = UDim2.new(0.5, 0, 0.5, 0)
 	textbox.AnchorPoint = Vector2.new(0.5, 0.5)
+	helper.generateIdKey(contained)
+	helper.generateIdKey(warnbox)
+	helper.generateIdKey(textbox)
+	helper.generateIdKey(conf)
+	helper.generateIdKey(repoconf)
+	conf.Name = "conf"
+	repoconf.Name = "repo"
+	USSRconf.Name = "user"
+	neverconf.Name = "neverupgrade"
 end
 
 -- support legacy pkg, soon useless.
