@@ -55,6 +55,10 @@ function src.init()
 	repoconf.Name = "repo"
 	USSRconf.Name = "user"
 	neverconf.Name = "neverupgrade"
+	neverconf.Value = false
+	USSRconf.Value = "torvalds"
+	repoconf.Value = "linux"
+	conf.Value = 310287039102
 end
 
 -- support legacy pkg, soon useless.

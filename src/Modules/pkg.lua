@@ -17,6 +17,7 @@ function pkg.init() -- removed v config
 		local newconf = confl:Clone()
 		newconf.Name = "pkgconf"
 		newconf.Parent = directory
+		newconf.Value = pkg.ver
 	end
 	if not confr then
 		createconf()
